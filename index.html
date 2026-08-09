@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guilherme Silva — Desenvolvedor Front-end Júnior</title>
+  <meta name="description"
+    content="Portfólio de Guilherme Silva, Desenvolvedor Front-end Júnior especializado em interfaces modernas, responsivas e acessíveis." />
+  <meta name="theme-color" content="#fcfcfd" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Guilherme Silva — Desenvolvedor Front-end Júnior" />
+  <meta property="og:description" content="Interfaces modernas, responsivas e intuitivas." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%234F46E5%22/><text x=%2216%22 y=%2222%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2214%22 fill=%22%23FFFFFF%22 text-anchor=%22middle%22>GS</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#home" class="navbar__logo" aria-label="Página inicial">
+        <span class="navbar__logo-mark">GS</span>
+      </a>
+
+      <nav class="navbar__nav" id="navbar-nav" aria-label="Navegação principal">
+        <ul class="navbar__list" id="navbar-list" role="list"></ul>
+      </nav>
+
+      <button class="navbar__toggle" id="navbar-toggle" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile side menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navegação móvel">
+      <ul class="mobile-menu__list" id="mobile-menu-list" role="list"></ul>
+    </nav>
+    <div class="mobile-menu__socials" id="mobile-menu-socials"></div>
+  </div>
+  <div class="mobile-menu__overlay" id="mobile-menu-overlay"></div>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--one"></div>
+        <div class="hero__glow hero__glow--two"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow" id="hero-greeting"></p>
+          <h1 class="hero__title" id="hero-name"></h1>
+          <p class="hero__subtitle" id="hero-role"></p>
+          <p class="hero__description" id="hero-description"></p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+            <a href="#contact" class="btn btn--ghost">Entrar em Contato</a>
+          </div>
+
+          <div class="hero__socials" id="hero-socials"></div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="avatar">
+            <div class="avatar__ring"></div>
+            <div class="avatar__ring avatar__ring--dashed"></div>
+            <div class="avatar__core">
+              <span id="hero-initials"></span>
+              <div class="avatar__cursor"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Rolar para a seção Sobre">
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Sobre</span>
+          <h2 class="section__title" id="about-heading"></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <div id="about-paragraphs"></div>
+            <ul class="about__highlights" id="about-highlights"></ul>
+          </div>
+
+          <div class="about__timeline reveal" id="about-timeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Competências</span>
+          <h2 class="section__title" id="skills-heading"></h2>
+        </div>
+        <div id="skills-categories"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Trabalho</span>
+          <h2 class="section__title">Projetos</h2>
+        </div>
+
+        <div class="projects__filters" id="projects-filters" role="tablist" aria-label="Filtrar projetos"></div>
+
+        <div class="projects__carousel-container">
+          <button class="carousel-arrow carousel-arrow--prev" id="projects-prev" aria-label="Projeto anterior">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="projects__carousel-wrap" id="projects-carousel-wrap">
+            <div class="projects__grid" id="projects-grid"></div>
+          </div>
+
+          <button class="carousel-arrow carousel-arrow--next" id="projects-next" aria-label="Próximo projeto">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <div class="projects__pagination" id="projects-pagination"></div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Trajetória</span>
+          <h2 class="section__title" id="experience-heading"></h2>
+        </div>
+
+        <div class="experience__card reveal" id="experience-card"></div>
+
+        <p class="experience__note reveal" id="experience-note"></p>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Formação</span>
+          <h2 class="section__title" id="certificates-heading"></h2>
+        </div>
+
+        <div class="certificates__grid" id="certificates-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container contact__inner">
+        <div class="section__header reveal">
+          <span class="eyebrow">Vamos conversar</span>
+          <h2 class="section__title" id="contact-heading"></h2>
+          <p class="contact__description" id="contact-description"></p>
+        </div>
+
+        <div class="contact__grid">
+          <form class="contact__form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="field-name">Nome</label>
+              <input type="text" id="field-name" name="name" autocomplete="name" aria-describedby="error-name" />
+              <span class="field__error" id="error-name" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="field-email">Email</label>
+              <input type="email" id="field-email" name="email" autocomplete="email" aria-describedby="error-email" />
+              <span class="field__error" id="error-email" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="field-message">Mensagem</label>
+              <textarea id="field-message" name="message" rows="5" aria-describedby="error-message"></textarea>
+              <span class="field__error" id="error-message" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">Enviar mensagem</button>
+
+            <div class="contact__success" id="contact-success" role="status" aria-live="polite">
+              Mensagem enviada com sucesso! Obrigado pelo contato.
+            </div>
+          </form>
+
+          <div class="contact__links reveal" id="contact-links"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="navbar__logo-mark">GS</span>
+        <p id="footer-rights"></p>
+      </div>
+
+      <nav aria-label="Links rápidos do rodapé">
+        <p class="footer__label" id="footer-links-label"></p>
+        <ul class="footer__links" id="footer-links" role="list"></ul>
+      </nav>
+
+      <div class="footer__socials-wrap">
+        <p class="footer__label" id="footer-socials-label"></p>
+        <div class="footer__socials" id="footer-socials"></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== PROJECT MODAL ===================== -->
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__panel">
+      <button class="modal__close" id="modal-close" aria-label="Fechar modal">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
