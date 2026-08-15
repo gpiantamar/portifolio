@@ -1,260 +1,1981 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guilherme Silva — Estagiário em Desenvolvimento Front-end</title>
+    <meta
+      name="description"
+      content="Portfólio de Guilherme Silva, Estagiário em Desenvolvimento Front-end especializado em interfaces modernas, responsivas e acessíveis."
+    />
+    <meta name="theme-color" content="#fcfcfd" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guilherme Silva — Desenvolvedor Front-end Júnior</title>
-  <meta name="description"
-    content="Portfólio de Guilherme Silva, Desenvolvedor Front-end Júnior especializado em interfaces modernas, responsivas e acessíveis." />
-  <meta name="theme-color" content="#fcfcfd" />
+    <meta
+      property="og:title"
+      content="Guilherme Silva — Estagiário em Desenvolvimento Front-end"
+    />
+    <meta
+      property="og:description"
+      content="Interfaces modernas, responsivas e intuitivas."
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Guilherme Silva — Desenvolvedor Front-end Júnior" />
-  <meta property="og:description" content="Interfaces modernas, responsivas e intuitivas." />
-  <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%234F46E5%22/><text x=%2216%22 y=%2222%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2214%22 fill=%22%23FFFFFF%22 text-anchor=%22middle%22>GS</text></svg>"
+    />
 
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%234F46E5%22/><text x=%2216%22 y=%2222%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2214%22 fill=%22%23FFFFFF%22 text-anchor=%22middle%22>GS</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<body>
-  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner container">
+        <a href="#home" class="navbar__logo" aria-label="Página inicial">
+          <span class="navbar__logo-mark">GS</span>
+        </a>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <header class="navbar" id="navbar">
-    <div class="navbar__inner container">
-      <a href="#home" class="navbar__logo" aria-label="Página inicial">
-        <span class="navbar__logo-mark">GS</span>
-      </a>
+        <nav
+          class="navbar__nav"
+          id="navbar-nav"
+          aria-label="Navegação principal"
+        >
+          <ul class="navbar__list" id="navbar-list" role="list">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#certificates">Certificados</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
 
-      <nav class="navbar__nav" id="navbar-nav" aria-label="Navegação principal">
-        <ul class="navbar__list" id="navbar-list" role="list"></ul>
+        <button
+          class="navbar__toggle"
+          id="navbar-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Navegação móvel">
+        <ul class="mobile-menu__list" id="mobile-menu-list" role="list">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#certificates">Certificados</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
       </nav>
-
-      <button class="navbar__toggle" id="navbar-toggle" aria-label="Abrir menu" aria-expanded="false"
-        aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile side menu -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <nav aria-label="Navegação móvel">
-      <ul class="mobile-menu__list" id="mobile-menu-list" role="list"></ul>
-    </nav>
-    <div class="mobile-menu__socials" id="mobile-menu-socials"></div>
-  </div>
-  <div class="mobile-menu__overlay" id="mobile-menu-overlay"></div>
-
-  <main id="main">
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="home">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__grid"></div>
-        <div class="hero__glow hero__glow--one"></div>
-        <div class="hero__glow hero__glow--two"></div>
-      </div>
-
-      <div class="container hero__inner">
-        <div class="hero__content reveal">
-          <p class="hero__eyebrow" id="hero-greeting"></p>
-          <h1 class="hero__title" id="hero-name"></h1>
-          <p class="hero__subtitle" id="hero-role"></p>
-          <p class="hero__description" id="hero-description"></p>
-
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">Ver Projetos</a>
-            <a href="#contact" class="btn btn--ghost">Entrar em Contato</a>
-          </div>
-
-          <div class="hero__socials" id="hero-socials"></div>
-        </div>
-
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="avatar">
-            <div class="avatar__ring"></div>
-            <div class="avatar__ring avatar__ring--dashed"></div>
-            <div class="avatar__core">
-              <span id="hero-initials"></span>
-              <div class="avatar__cursor"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a href="#about" class="hero__scroll" aria-label="Rolar para a seção Sobre">
-        <span class="hero__scroll-line"></span>
-      </a>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="eyebrow">Sobre</span>
-          <h2 class="section__title" id="about-heading"></h2>
-        </div>
-
-        <div class="about__grid">
-          <div class="about__text reveal">
-            <div id="about-paragraphs"></div>
-            <ul class="about__highlights" id="about-highlights"></ul>
-          </div>
-
-          <div class="about__timeline reveal" id="about-timeline"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== SKILLS ===================== -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="eyebrow">Competências</span>
-          <h2 class="section__title" id="skills-heading"></h2>
-        </div>
-        <div id="skills-categories"></div>
-      </div>
-    </section>
-
-    <!-- ===================== PROJECTS ===================== -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="eyebrow">Trabalho</span>
-          <h2 class="section__title">Projetos</h2>
-        </div>
-
-        <div class="projects__filters" id="projects-filters" role="tablist" aria-label="Filtrar projetos"></div>
-
-        <div class="projects__carousel-container">
-          <button class="carousel-arrow carousel-arrow--prev" id="projects-prev" aria-label="Projeto anterior">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-
-          <div class="projects__carousel-wrap" id="projects-carousel-wrap">
-            <div class="projects__grid" id="projects-grid"></div>
-          </div>
-
-          <button class="carousel-arrow carousel-arrow--next" id="projects-next" aria-label="Próximo projeto">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
-
-        <div class="projects__pagination" id="projects-pagination"></div>
-      </div>
-    </section>
-
-    <!-- ===================== EXPERIENCE ===================== -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="eyebrow">Trajetória</span>
-          <h2 class="section__title" id="experience-heading"></h2>
-        </div>
-
-        <div class="experience__card reveal" id="experience-card"></div>
-
-        <p class="experience__note reveal" id="experience-note"></p>
-      </div>
-    </section>
-
-    <!-- ===================== CERTIFICATES ===================== -->
-    <section class="section" id="certificates">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="eyebrow">Formação</span>
-          <h2 class="section__title" id="certificates-heading"></h2>
-        </div>
-
-        <div class="certificates__grid" id="certificates-grid"></div>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <section class="section" id="contact">
-      <div class="container contact__inner">
-        <div class="section__header reveal">
-          <span class="eyebrow">Vamos conversar</span>
-          <h2 class="section__title" id="contact-heading"></h2>
-          <p class="contact__description" id="contact-description"></p>
-        </div>
-
-        <div class="contact__grid">
-          <form class="contact__form reveal" id="contact-form" novalidate>
-            <div class="field">
-              <label for="field-name">Nome</label>
-              <input type="text" id="field-name" name="name" autocomplete="name" aria-describedby="error-name" />
-              <span class="field__error" id="error-name" role="alert"></span>
-            </div>
-
-            <div class="field">
-              <label for="field-email">Email</label>
-              <input type="email" id="field-email" name="email" autocomplete="email" aria-describedby="error-email" />
-              <span class="field__error" id="error-email" role="alert"></span>
-            </div>
-
-            <div class="field">
-              <label for="field-message">Mensagem</label>
-              <textarea id="field-message" name="message" rows="5" aria-describedby="error-message"></textarea>
-              <span class="field__error" id="error-message" role="alert"></span>
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--block">Enviar mensagem</button>
-
-            <div class="contact__success" id="contact-success" role="status" aria-live="polite">
-              Mensagem enviada com sucesso! Obrigado pelo contato.
-            </div>
-          </form>
-
-          <div class="contact__links reveal" id="contact-links"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="navbar__logo-mark">GS</span>
-        <p id="footer-rights"></p>
-      </div>
-
-      <nav aria-label="Links rápidos do rodapé">
-        <p class="footer__label" id="footer-links-label"></p>
-        <ul class="footer__links" id="footer-links" role="list"></ul>
-      </nav>
-
-      <div class="footer__socials-wrap">
-        <p class="footer__label" id="footer-socials-label"></p>
-        <div class="footer__socials" id="footer-socials"></div>
+      <div class="mobile-menu__socials" id="mobile-menu-socials">
+        <a
+          href="https://github.com/gpiantamar"
+          class="btn btn--icon"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/guilherme-silva-piantamar-84ab9a232/"
+          class="btn btn--icon"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+            />
+          </svg>
+        </a>
+        <a
+          href="mailto:guilhermepiantamar@gmail.com"
+          class="btn btn--icon"
+          aria-label="Email"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.2L19.8 6H4.2ZM20 8.1l-7.4 5.9a1 1 0 0 1-1.2 0L4 8.1v10.4a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V8.1Z"
+            />
+          </svg>
+        </a>
       </div>
     </div>
-  </footer>
+    <div class="mobile-menu__overlay" id="mobile-menu-overlay"></div>
 
-  <!-- ===================== PROJECT MODAL ===================== -->
-  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true"
-    aria-labelledby="modal-title">
-    <div class="modal__overlay" id="modal-overlay"></div>
-    <div class="modal__panel">
-      <button class="modal__close" id="modal-close" aria-label="Fechar modal">&times;</button>
-      <div id="modal-content"></div>
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__grid"></div>
+          <div class="hero__glow hero__glow--one"></div>
+          <div class="hero__glow hero__glow--two"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <div class="hero__content reveal">
+            <p class="hero__eyebrow" id="hero-greeting">Olá, eu sou</p>
+            <h1 class="hero__title" id="hero-name">Guilherme Silva</h1>
+            <p class="hero__subtitle" id="hero-role">
+              Estagiário em Desenvolvimento Front-end
+            </p>
+            <p class="hero__description" id="hero-description">
+              Sou apaixonado por criar interfaces modernas, responsivas e
+              intuitivas, buscando sempre oferecer a melhor experiência ao
+              usuário. Atualmente trabalho com implantação e suporte de temas
+              para plataformas de e-commerce, adquirindo experiência prática em
+              desenvolvimento Front-end e evolução constante nas tecnologias
+              web.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+              <a href="#contact" class="btn btn--ghost">Entrar em Contato</a>
+            </div>
+
+            <div class="hero__socials" id="hero-socials">
+              <a
+                href="https://github.com/gpiantamar"
+                class="btn btn--icon"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/guilherme-silva-piantamar-84ab9a232/"
+                class="btn btn--icon"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="hero__avatar-wrap">
+              <div class="avatar">
+                <div class="avatar__ring"></div>
+                <div class="avatar__ring avatar__ring--dashed"></div>
+                <div class="avatar__core">
+                  <span>GS</span>
+                </div>
+              </div>
+              <a
+                href="assets/curriculo.pdf"
+                download="Curriculo_Guilherme_Silva.pdf"
+                class="btn btn--primary btn--cv"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Baixar Currículo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#about"
+          class="hero__scroll"
+          aria-label="Rolar para a seção Sobre"
+        >
+          <span class="hero__scroll-line"></span>
+        </a>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Sobre</span>
+            <h2 class="section__title" id="about-heading">Sobre mim</h2>
+          </div>
+
+          <div class="about__grid">
+            <div class="about__text reveal">
+              <div id="about-paragraphs">
+                <p>
+                  Atualmente trabalho com implantação e suporte de temas para
+                  plataformas de e-commerce, atuando diretamente na customização
+                  de layouts e correção de comportamentos de interface para
+                  lojas virtuais.
+                </p>
+                <p>
+                  No dia a dia, desenvolvo interfaces responsivas com HTML, CSS,
+                  JavaScript e React, sempre buscando equilíbrio entre
+                  performance, acessibilidade e uma boa experiência visual.
+                </p>
+                <p>
+                  Estou constantemente estudando novas tecnologias Front-end —
+                  TypeScript, boas práticas de arquitetura e ferramentas de
+                  produtividade — para evoluir como desenvolvedor e entregar
+                  cada vez mais valor em cada projeto.
+                </p>
+              </div>
+              <ul class="about__highlights" id="about-highlights">
+                <li>Implantação e suporte de temas para e-commerce</li>
+                <li>Desenvolvimento de interfaces responsivas</li>
+                <li>Base sólida em HTML, CSS, JavaScript e React</li>
+                <li>Estudo contínuo de novas tecnologias Front-end</li>
+              </ul>
+            </div>
+
+            <div class="about__timeline reveal" id="about-timeline">
+              <div class="timeline">
+                <div class="timeline__item">
+                  <span class="timeline__dot"></span>
+                  <div class="timeline__year">2022</div>
+                  <div class="timeline__title">Início dos estudos</div>
+                  <div class="timeline__desc">
+                    Primeiro contato com HTML, CSS e lógica de programação,
+                    explorando cursos e projetos pessoais.
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dot"></span>
+                  <div class="timeline__year">2023</div>
+                  <div class="timeline__title">Faculdade</div>
+                  <div class="timeline__desc">
+                    Início da graduação voltada à área de tecnologia,
+                    aprofundando fundamentos de programação e desenvolvimento
+                    web.
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dot"></span>
+                  <div class="timeline__year">2023</div>
+                  <div class="timeline__title">Primeiros projetos</div>
+                  <div class="timeline__desc">
+                    Desenvolvimento de landing pages e pequenas aplicações com
+                    JavaScript, consolidando a base de Front-end.
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dot"></span>
+                  <div class="timeline__year">2024 - 2026</div>
+                  <div class="timeline__title">Trabalho atual</div>
+                  <div class="timeline__desc">
+                    Atuação com implantação e suporte de temas para plataformas
+                    de e-commerce, unindo teoria e prática no mercado.
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dot"></span>
+                  <div class="timeline__year">Próximo passo</div>
+                  <div class="timeline__title">Próximos objetivos</div>
+                  <div class="timeline__desc">
+                    Aprofundar conhecimentos em React, TypeScript e arquitetura
+                    Front-end, evoluindo para um papel Júnior.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Competências</span>
+            <h2 class="section__title" id="skills-heading">
+              Skills & Competências
+            </h2>
+          </div>
+          <div id="skills-categories">
+            <div class="skills__category">
+              <h3 class="skills__category-name">Desenvolvimento Front-end</h3>
+              <div class="skills__grid">
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">HTML5</h4>
+                    <span class="skill-card__tag"
+                      >Semântica & Acessibilidade</span
+                    >
+                  </div>
+                  <p class="skill-card__desc">
+                    Estruturação limpa, SEO técnico e conformidade com padrões
+                    WCAG.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">CSS3</h4>
+                    <span class="skill-card__tag">Layouts & Animações</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Flexbox, Grid Layout, animações de alta performance e design
+                    responsivo.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">JavaScript</h4>
+                    <span class="skill-card__tag">ES6+ & Async</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Lógica moderna, manipulação avançada de DOM, Promises e
+                    Fetch API.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">React</h4>
+                    <span class="skill-card__tag">Componentes & Hooks</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Arquitetura reativa de componentes, gestão de estado e
+                    otimização de renderização.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">Tailwind CSS</h4>
+                    <span class="skill-card__tag">Estilização Utilitária</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Sistemas de design consistentes, agilidade de prototipagem e
+                    customização via tokens.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__category">
+              <h3 class="skills__category-name">Ferramentas & Workflow</h3>
+              <div class="skills__grid">
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">Git</h4>
+                    <span class="skill-card__tag">Versionamento</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Fluxo de trabalho com branches, commits atômicos e resolução
+                    de conflitos.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">GitHub</h4>
+                    <span class="skill-card__tag">Colaboração</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Organização de repositórios, Pull Requests, Code Review e
+                    documentação.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">VS Code</h4>
+                    <span class="skill-card__tag">IDE / Dev Environment</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Configuração otimizada com snippets, linters, formatadores e
+                    atalhos de alta produtividade.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">Figma</h4>
+                    <span class="skill-card__tag">UI / UX Inspection</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Fidelidade na conversão de layouts, medição de espaçamentos
+                    e exportação de assets.
+                  </p>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-card__header">
+                    <h4 class="skill-card__name">Postman</h4>
+                    <span class="skill-card__tag">APIs & Testes HTTP</span>
+                  </div>
+                  <p class="skill-card__desc">
+                    Inspeção de endpoints, validação de payloads JSON e testes
+                    de integração REST.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Trabalho</span>
+            <h2 class="section__title">Projetos</h2>
+          </div>
+
+          <div
+            class="projects__filters"
+            id="projects-filters"
+            role="tablist"
+            aria-label="Filtrar projetos"
+          >
+            <button
+              type="button"
+              role="tab"
+              class="filter-btn is-active"
+              data-filter="Todos"
+            >
+              Todos
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-btn"
+              data-filter="React"
+            >
+              React
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-btn"
+              data-filter="JavaScript"
+            >
+              JavaScript
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-btn"
+              data-filter="Jogos"
+            >
+              Jogos
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-btn"
+              data-filter="Landing Pages"
+            >
+              Landing Pages
+            </button>
+          </div>
+
+          <div class="projects__carousel-container">
+            <button
+              class="carousel-arrow carousel-arrow--prev"
+              id="projects-prev"
+              aria-label="Projeto anterior"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <div class="projects__carousel-wrap" id="projects-carousel-wrap">
+              <div class="projects__grid" id="projects-grid">
+                <article
+                  class="project-card"
+                  data-categories="Landing Pages,JavaScript"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto Homem-Aranha: Um Novo Dia"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://i.imgur.com/aF6JviK.png"
+                      alt="Interface do projeto Homem-Aranha: Um Novo Dia"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">
+                        Homem-Aranha: Um Novo Dia
+                      </h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Landing page interativa e responsiva desenvolvida para
+                      apresentar o conceito e o elenco do filme fictício
+                      Homem-Aranha: Um Novo Dia.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">HTML</span>
+                      <span class="tag">JavaScript</span>
+                      <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/spider-man"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          href="https://gpiantamar.github.io/spider-man/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Ver demonstração"
+                          onclick="event.stopPropagation()"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512"
+                            height="512"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 337.792 337.792"
+                            
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="m337.792 134.824-130.824 99.441v-52.216C117.061 173.419 30.735 207.817.001 302.41-.337 180.728 99.895 111.781 206.968 88.488V35.382z"
+                                opacity="1"
+                                class=""
+                              ></path>
+                            </g></svg
+                        ></a>
+                      </span>
+                    </div>
+                  </div>
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">
+                      Homem-Aranha: Um Novo Dia
+                    </h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <img
+                        src="https://i.imgur.com/aF6JviK.png"
+                        alt="Interface do projeto Homem-Aranha: Um Novo Dia"
+                      />
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Uma landing page interativa e responsiva desenvolvida
+                        para apresentar o conceito e o elenco do filme fictício
+                        Homem-Aranha: Um Novo Dia. O projeto conta com um
+                        slider/carrossel customizado de apresentação do elenco e
+                        personagens, indicador temático e um design moderno
+                        voltado para a experiência do usuário.
+                      </p>
+
+                      <div class="modal__section-title">Tecnologias</div>
+                      <div class="modal__tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Adaptação e otimização do layout para diferentes
+                        tamanhos de tela (desktop, tablet e mobile)<br />•
+                        Sincronização em tempo real entre a navegação do
+                        carrossel e a seleção direta na lista lateral de
+                        atores<br />• Gerenciamento de transições dinâmicas de
+                        conteúdo mantendo a fluidez visual sem uso de frameworks
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Desenvolvimento de sliders/carrosséis customizados com
+                        JavaScript puro (Vanilla)<br />• Criação e manipulação
+                        de indicadores de navegação interativos<br />• Práticas
+                        de Design Responsivo e CSS moderno para experiência do
+                        usuário (UX)
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--ghost"
+                        href="https://github.com/gpiantamar/spider-man"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                      <a
+                        class="btn btn--primary"
+                        href="https://gpiantamar.github.io/spider-man/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver Demo</a
+                      >
+                    </div>
+                  </template>
+                </article>
+
+                <article
+                  class="project-card"
+                  data-categories="JavaScript,Aplicações Web"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto Piano Simulator"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://i.imgur.com/5j5qQXr.png"
+                      alt="Interface do Piano Simulator"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">Piano Simulator</h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Simulador de piano interativo que permite reproduzir notas
+                      musicais em tempo real via teclado físico ou
+                      cliques/toques na tela.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">HTML</span>
+                      <span class="tag">JavaScript</span>
+                      <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/piano-simulator"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          href="https://gpiantamar.github.io/piano-simulator/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Ver demonstração"
+                          onclick="event.stopPropagation()"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512"
+                            height="512"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 337.792 337.792"
+                            
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="m337.792 134.824-130.824 99.441v-52.216C117.061 173.419 30.735 207.817.001 302.41-.337 180.728 99.895 111.781 206.968 88.488V35.382z"
+                                opacity="1"
+                                class=""
+                              ></path>
+                            </g></svg
+                        ></a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">
+                      Piano Simulator
+                    </h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <video
+                        src="https://i.imgur.com/IYiFT4i.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-label="Demonstração do Piano Simulator"
+                      ></video>
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Um simulador de piano virtual e interativo desenvolvido
+                        com JavaScript puro. A aplicação permite tocar melodias
+                        mapeadas diretamente no teclado do computador ou através
+                        de toques nas teclas virtuais (brancas e pretas),
+                        oferecendo feedback sonoro imediato e animações de
+                        clique.
+                      </p>
+
+                      <div class="modal__section-title">Tecnologias</div>
+                      <div class="modal__tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript (ES6+)</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Mapeamento preciso de eventos de teclado
+                        (keydown/keyup) e cliques do mouse sem sobreposição ou
+                        atraso (latência) no áudio<br />• Posicionamento e
+                        estilização responsiva das teclas brancas e pretas
+                        usando Flexbox/Grid e posições absolutas<br />•
+                        Gerenciamento da reprodução simultânea de múltiplas
+                        notas musicais (polifonia)
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Manipulação de áudio no navegador via JavaScript
+                        (instanciação e controle de playback de arquivos de
+                        áudio)<br />• Tratamento avançado de eventos do DOM para
+                        capturar entradas físicas e virtuais de forma
+                        sincronizada<br />• Técnicas de CSS para simular estados
+                        ativos (press/release) e relevo das teclas
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--ghost"
+                        href="https://github.com/gpiantamar/piano-simulator"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                      <a
+                        class="btn btn--primary"
+                        href="https://gpiantamar.github.io/piano-simulator/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver Demo</a
+                      >
+                    </div>
+                  </template>
+                </article>
+
+                <article
+                  class="project-card"
+                  data-categories="Jogos,JavaScript"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto Detona Ralph"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://i.imgur.com/ezay7q1.png"
+                      alt="Interface do jogo Detona Ralph"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">Detona Ralph</h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Jogo estilo arcade 2D baseado no clássico Detona Ralph,
+                      com mecânicas de tempo regressivo, contagem de vidas e
+                      pontuação em tempo real.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">HTML</span>
+                      <span class="tag">JavaScript</span>
+                      <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/detona-ralph"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          href="https://gpiantamar.github.io/detona-ralph/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Ver demonstração"
+                          onclick="event.stopPropagation()"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512"
+                            height="512"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 337.792 337.792"
+                            
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="m337.792 134.824-130.824 99.441v-52.216C117.061 173.419 30.735 207.817.001 302.41-.337 180.728 99.895 111.781 206.968 88.488V35.382z"
+                                opacity="1"
+                                class=""
+                              ></path>
+                            </g></svg
+                        ></a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">Detona Ralph</h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <video
+                        src=" https://i.imgur.com/BFHYegY.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-label="Demonstração do jogo Detona Ralph"
+                      ></video>
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Um jogo no estilo clássico arcade (Whack-a-Mole)
+                        desenvolvido em JavaScript puro inspirado no universo de
+                        Detona Ralph. O objetivo é acertar o Ralph quando ele
+                        surge aleatoriamente nos quadrados do grid antes do
+                        tempo se esgotar, acumulando pontos e gerenciando as
+                        vidas restantes com efeitos sonoros sincronizados.
+                      </p>
+
+                      <div class="modal__section-title">Tecnologias</div>
+                      <div class="modal__tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript (ES6+)</span>
+                        <span class="tag">Audio API</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Controle sincronizado de múltiplos intervalos
+                        assíncronos (Game Loop, temporizador regressivo e spawn
+                        aleatório de inimigos)<br />• Tratamento de eventos de
+                        clique para evitar pontuação duplicada ou spam em uma
+                        mesma posição<br />• Gerenciamento dinâmico de estados
+                        de vitória/derrota com reset de variáveis em memória sem
+                        reload de página
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Arquitetura básica de jogos 2D e organização de
+                        estados globais (views, values e actions)<br />•
+                        Manipulação e controle preciso de ciclos temporais via
+                        <code>setInterval</code> e <code>clearInterval</code
+                        ><br />• Reprodução e feedback sonoro dinâmico
+                        utilizando a Audio API do navegador
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--ghost"
+                        href="https://github.com/gpiantamar/detona-ralph"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                      <a
+                        class="btn btn--primary"
+                        href="https://gpiantamar.github.io/detona-ralph/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver Demo</a
+                      >
+                    </div>
+                  </template>
+                </article>
+
+                <article
+                  class="project-card"
+                  data-categories="Landing Pages,CSS"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto DIO Landing Page"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://i.imgur.com/FVEqhgK.png"
+                      alt="Interface da DIO Landing Page"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">DIO Landing Page</h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Recriação da landing page institucional da Digital
+                      Innovation One (DIO), com foco em fidelidade visual,
+                      semântica HTML5 e responsividade.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">HTML5</span>
+                      <span class="tag">CSS3</span>
+                      <span class="tag">Flexbox</span>
+                      <span class="tag">Design Responsivo</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/landing-page-dio"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          href="https://gpiantamar.github.io/landing-page-dio/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Ver demonstração"
+                          onclick="event.stopPropagation()"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512"
+                            height="512"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 337.792 337.792"
+                            
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="m337.792 134.824-130.824 99.441v-52.216C117.061 173.419 30.735 207.817.001 302.41-.337 180.728 99.895 111.781 206.968 88.488V35.382z"
+                                opacity="1"
+                                class=""
+                              ></path>
+                            </g></svg
+                        ></a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">
+                      DIO Landing Page
+                    </h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <img
+                        src="https://i.imgur.com/FVEqhgK.png"
+                        alt="Interface da DIO Landing Page"
+                      />
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Desenvolvimento e recriação da interface da landing page
+                        da Digital Innovation One (DIO). O projeto enfatiza a
+                        estruturação correta de elementos semânticos,
+                        componentização visual de cards, botões com gradientes
+                        modernos e adaptação fluida para múltiplas resoluções.
+                      </p>
+
+                      <div class="modal__section-title">Tecnologias</div>
+                      <div class="modal__tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Flexbox</span>
+                        <span class="tag">Mobile First</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Fidelidade visual na reprodução de tipografia,
+                        gradientes e espaçamentos originais da plataforma<br />•
+                        Organização de layout adaptativo em grid/flexbox
+                        mantendo a proporção de banners e seções de destaque<br />•
+                        Otimização do fluxo de formulários e botões de chamada
+                        para ação (CTA) em dispositivos móveis
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Domínio de técnicas avançadas de estilização com CSS
+                        puro e variáveis customizadas<br />• Aplicação
+                        consistente de boas práticas de HTML semântico e
+                        acessibilidade básica<br />• Construção de layouts
+                        responsivos através de Media Queries
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--ghost"
+                        href="https://github.com/gpiantamar/landing-page-dio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                      <a
+                        class="btn btn--primary"
+                        href="https://gpiantamar.github.io/landing-page-dio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver Demo</a
+                      >
+                    </div>
+                  </template>
+                </article>
+
+                <article
+                  class="project-card"
+                  data-categories="Sistemas,C#,ASP.NET"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto Sistema de Locadora"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://via.placeholder.com/600x340?text=Locadora"
+                      alt="Interface do Sistema de Locadora"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">Sistema de Locadora</h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Aplicação web desenvolvida em C# e .NET para gerenciamento
+                      completo de locadora, contemplando cadastros, regras de
+                      negócio e controle de locações.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">C#</span>
+                      <span class="tag">.NET / ASP.NET</span>
+                      <span class="tag">HTML5</span>
+                      <span class="tag">CSS3</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/Locadora"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">
+                      Sistema de Locadora
+                    </h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <img
+                        src="https://via.placeholder.com/600x340?text=Locadora"
+                        alt="Interface do Sistema de Locadora"
+                      />
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Sistema web voltado ao gerenciamento operacional de uma
+                        locadora, integrando uma camada backend em C# para
+                        controle de regras de negócio, persistência e
+                        validações, associada a interfaces com formulários e
+                        visualização de dados estruturados em HTML e CSS.
+                      </p>
+
+                      <div class="modal__section-title">Tecnologias</div>
+                      <div class="modal__tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET / ASP.NET</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">POO</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Integração fluida entre as views (HTML/CSS) e os
+                        controllers/modelos em C#<br />• Implementação de
+                        validações consistentes tanto no cliente quanto no
+                        servidor para formulários de cadastro e locação<br />•
+                        Gerenciamento do ciclo de vida dos registros
+                        (disponibilidade de itens, devoluções e status em
+                        aberto)
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Desenvolvimento de aplicações web baseadas no
+                        ecossistema C# / .NET<br />• Separação de
+                        responsabilidades e aplicação prática de Orientação a
+                        Objetos na camada de negócios<br />• Construção e
+                        estilização de interfaces dinâmicas com HTML semântico e
+                        CSS
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--primary"
+                        href="https://github.com/gpiantamar/Locadora"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                    </div>
+                  </template>
+                </article>
+
+                <article
+                  class="project-card"
+                  data-categories="Jogos,JavaScript"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto Yu-Gi-Oh! Card Game"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://i.imgur.com/IdWOjsS.png"
+                      alt="Interface do Yu-Gi-Oh! Card Game"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">Yu-Gi-Oh! Card Game</h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Jogo de cartas temático inspirado em Yu-Gi-Oh!, com
+                      mecânicas de duelo no estilo Jo-Ken-Pô, pontuação dinâmica
+                      e efeitos audiovisuais imersivos.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">HTML5</span>
+                      <span class="tag">CSS3</span>
+                      <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/game-yu-gi-oh"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          href="https://gpiantamar.github.io/game-yu-gi-oh/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Ver demonstração"
+                          onclick="event.stopPropagation()"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512"
+                            height="512"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 337.792 337.792"
+                            
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="m337.792 134.824-130.824 99.441v-52.216C117.061 173.419 30.735 207.817.001 302.41-.337 180.728 99.895 111.781 206.968 88.488V35.382z"
+                                opacity="1"
+                                class=""
+                              ></path>
+                            </g></svg
+                        ></a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">
+                      Yu-Gi-Oh! Card Game
+                    </h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <video
+                        src="https://i.imgur.com/23sswNL.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-label="Demonstração do Yu-Gi-Oh! Card Game"
+                      ></video>
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Um jogo de cartas interativo no navegador ambientado no
+                        universo de Yu-Gi-Oh! desenvolvido durante os projetos
+                        da DIO. A mecânica simula duelos baseados em regras de
+                        vantagens e fraquezas (estilo pedra, papel e tesoura),
+                        contando com pré-visualização de detalhes e atributos da
+                        carta em hover, trilha sonora e efeitos sonoros
+                        sincronizados às ações.
+                      </p>
+
+                      <div class="modal__section-title">Tecnologias</div>
+                      <div class="modal__tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript (ES6+)</span>
+                        <span class="tag">Audio API</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Gerenciamento do estado das cartas (distribuição
+                        aleatória, cartas viradas e revelação durante o
+                        confronto)<br />• Sincronização de feedbacks sonoros
+                        (música de fundo, seleção e vitória/derrota) sem
+                        bloquear a interface<br />• Atualização em tempo real do
+                        painel lateral de detalhes ao passar o mouse sobre cada
+                        carta no deck
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Estruturação de lógica de comparação e regras de
+                        combate em jogos de cartas via JavaScript puro<br />•
+                        Manipulação de múltiplos elementos dinâmicos do DOM
+                        associados a atributos de dados (dataset)<br />•
+                        Estilização com animações CSS para recriar a atmosfera
+                        visual dos duelos clássicos
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--ghost"
+                        href="https://github.com/gpiantamar/game-yu-gi-oh"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                      <a
+                        class="btn btn--primary"
+                        href="https://gpiantamar.github.io/game-yu-gi-oh/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver Demo</a
+                      >
+                    </div>
+                  </template>
+                </article>
+
+                <article
+                  class="project-card"
+                  data-categories="Jogos,Python"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Ver detalhes do projeto Jogo da Cobrinha em Python"
+                >
+                  <div class="project-card__media">
+                    <img
+                      src="https://i.imgur.com/zw4O4FU.png"
+                      alt="Interface do Jogo da Cobrinha (Snake)"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__top">
+                      <h3 class="project-card__name">
+                        Jogo da Cobrinha (Snake)
+                      </h3>
+                      <span class="project-card__status">Concluído</span>
+                    </div>
+                    <p class="project-card__desc">
+                      Recriação do clássico Jogo da Cobrinha em Python usando
+                      Pygame. Conta com geração aleatória de comida, contagem de
+                      pontuação e controle de eventos em tempo real.
+                    </p>
+                    <div class="project-card__tags">
+                      <span class="tag">Python</span>
+                      <span class="tag">Pygame</span>
+                      <span class="tag">Random</span>
+                      <span class="tag">Sys</span>
+                    </div>
+                    <div class="project-card__foot">
+                      <span>2024</span>
+                      <span class="project-card__links">
+                        <a
+                          href="https://github.com/gpiantamar/snake_game"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Repositório no GitHub"
+                          onclick="event.stopPropagation()"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                            />
+                          </svg>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <template class="project-modal-template">
+                    <h3 class="modal__title" id="modal-title">
+                      Jogo da Cobrinha (Snake)
+                    </h3>
+                    <div class="modal__meta">
+                      <span>2024</span><span>·</span><span>Concluído</span>
+                    </div>
+
+                    <div class="modal__media">
+                      <video
+                        src="https://i.imgur.com/zw4O4FU.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-label="Demonstração do Jogo da Cobrinha (Snake)"
+                      ></video>
+                    </div>
+
+                    <div class="modal__body">
+                      <p>
+                        Projeto prático do clássico "Jogo da Cobrinha"
+                        desenvolvido inteiramente em Python. A aplicação utiliza
+                        o ecossistema Pygame para renderização visual, escuta de
+                        eventos do teclado e gerenciamento de tempo da janela,
+                        integrando módulos nativos do Python para sorteio das
+                        posições dos alimentos e encerramento seguro da
+                        aplicação.
+                      </p>
+
+                      <div class="modal__section-title">
+                        Tecnologias e Módulos
+                      </div>
+                      <div class="modal__tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pygame</span>
+                        <span class="tag">pygame.locals</span>
+                        <span class="tag">random (randint)</span>
+                        <span class="tag">sys (exit)</span>
+                      </div>
+
+                      <div class="modal__section-title">
+                        Principais desafios
+                      </div>
+                      <p>
+                        • Sorteio pseudoaleatório das coordenadas da fruta
+                        usando `randint` garantindo alinhamento com a grade do
+                        jogo<br />• Captura fluida e mapeamento das teclas
+                        direcionais utilizando `pygame.locals`<br />•
+                        Gerenciamento do encerramento limpo da Janela/Game Loop
+                        chamando `exit()` do módulo `sys` no evento de fechar a
+                        janela
+                      </p>
+
+                      <div class="modal__section-title">Aprendizados</div>
+                      <p>
+                        • Prática avançada na estrutura básica de Game Loop do
+                        Pygame (`pygame.init`, `display.set_mode`, atualização
+                        de tela)<br />• Manipulação de variáveis de estado para
+                        crescimento do corpo da cobra e atualização da
+                        pontuação<br />• Utilização de bibliotecas nativas e
+                        externas no ecossistema Python para desenvolvimento
+                        desktop 2D
+                      </p>
+                    </div>
+
+                    <div class="modal__actions">
+                      <a
+                        class="btn btn--ghost"
+                        href="https://github.com/gpiantamar/snake_game"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Ver no GitHub</a
+                      >
+                    </div>
+                  </template>
+                </article>
+              </div>
+            </div>
+
+            <button
+              class="carousel-arrow carousel-arrow--next"
+              id="projects-next"
+              aria-label="Próximo projeto"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="projects__pagination" id="projects-pagination"></div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Trajetória</span>
+            <h2 class="section__title" id="experience-heading">Experiência</h2>
+          </div>
+
+          <div class="experience__card reveal" id="experience-card">
+            <div class="experience__role">Desenvolvedor Front-end</div>
+            <div class="experience__company">
+              Implantação e Suporte de Temas E-commerce
+            </div>
+            <div class="experience__period">2024 — Atual</div>
+            <ul class="experience__list">
+              <li>Implantação de lojas virtuais</li>
+              <li>Customização de layouts</li>
+              <li>
+                Desenvolvimento Front-end com HTML, CSS, JavaScript e React
+              </li>
+              <li>Correção de bugs</li>
+              <li>Atendimento técnico</li>
+              <li>Melhorias visuais e otimização de interfaces</li>
+            </ul>
+          </div>
+
+          <p class="experience__note reveal" id="experience-note">
+            Além do trabalho atual, dedico parte do tempo a projetos pessoais
+            para praticar React, TypeScript e novas arquiteturas Front-end — a
+            seção de Projetos reúne os principais.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="certificates">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Formação</span>
+            <h2 class="section__title" id="certificates-heading">
+              Certificados
+            </h2>
+          </div>
+
+          <div class="certificates__grid" id="certificates-grid">
+            <div class="certificate-card">
+              <div class="certificate-card__icon">OR</div>
+              <div class="certificate-card__name">JavaScript Completo</div>
+              <div class="certificate-card__institution">Origamid</div>
+              <p class="certificate-card__desc">
+                Fundamentos e conceitos avançados de JavaScript moderno.
+              </p>
+              <div class="certificate-card__date">2023</div>
+            </div>
+
+            <div class="certificate-card">
+              <div class="certificate-card__icon">OR</div>
+              <div class="certificate-card__name">React.js na Prática</div>
+              <div class="certificate-card__institution">Origamid</div>
+              <p class="certificate-card__desc">
+                Componentização, hooks e boas práticas com React.
+              </p>
+              <div class="certificate-card__date">2023</div>
+            </div>
+
+            <div class="certificate-card">
+              <div class="certificate-card__icon">OR</div>
+              <div class="certificate-card__name">HTML e CSS Avançado</div>
+              <div class="certificate-card__institution">Origamid</div>
+              <p class="certificate-card__desc">
+                Layouts responsivos com Flexbox e Grid.
+              </p>
+              <div class="certificate-card__date">2022</div>
+            </div>
+
+            <div class="certificate-card">
+              <div class="certificate-card__icon">AL</div>
+              <div class="certificate-card__name">Git e GitHub na Prática</div>
+              <div class="certificate-card__institution">Alura</div>
+              <p class="certificate-card__desc">
+                Controle de versão e fluxo colaborativo de trabalho.
+              </p>
+              <div class="certificate-card__date">2022</div>
+            </div>
+
+            <div class="certificate-card">
+              <div class="certificate-card__icon">AL</div>
+              <div class="certificate-card__name">Lógica de Programação</div>
+              <div class="certificate-card__institution">Alura</div>
+              <p class="certificate-card__desc">
+                Fundamentos de lógica aplicados ao desenvolvimento web.
+              </p>
+              <div class="certificate-card__date">2021</div>
+            </div>
+
+            <div class="certificate-card">
+              <div class="certificate-card__icon">RO</div>
+              <div class="certificate-card__name">
+                TypeScript para Front-end
+              </div>
+              <div class="certificate-card__institution">Rocketseat</div>
+              <p class="certificate-card__desc">
+                Tipagem estática aplicada a projetos React.
+              </p>
+              <div class="certificate-card__date">2024</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact__inner">
+          <div class="section__header reveal">
+            <span class="eyebrow">Vamos conversar</span>
+            <h2 class="section__title" id="contact-heading">Contato</h2>
+            <p class="contact__description" id="contact-description">
+              Aberto a oportunidades, freelas e boas conversas sobre Front-end.
+              Envie uma mensagem ou me encontre nas redes abaixo.
+            </p>
+          </div>
+
+          <div class="contact__grid">
+            <form class="contact__form reveal" id="contact-form" novalidate>
+              <div class="field">
+                <label for="field-name">Nome</label>
+                <input
+                  type="text"
+                  id="field-name"
+                  name="name"
+                  autocomplete="name"
+                  aria-describedby="error-name"
+                />
+                <span class="field__error" id="error-name" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="field-email">Email</label>
+                <input
+                  type="email"
+                  id="field-email"
+                  name="email"
+                  autocomplete="email"
+                  aria-describedby="error-email"
+                />
+                <span class="field__error" id="error-email" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="field-message">Mensagem</label>
+                <textarea
+                  id="field-message"
+                  name="message"
+                  rows="5"
+                  aria-describedby="error-message"
+                ></textarea>
+                <span
+                  class="field__error"
+                  id="error-message"
+                  role="alert"
+                ></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--block">
+                Enviar mensagem
+              </button>
+
+              <div
+                class="contact__success"
+                id="contact-success"
+                role="status"
+                aria-live="polite"
+              >
+                Mensagem enviada com sucesso! Obrigado pelo contato.
+              </div>
+            </form>
+
+            <div class="contact__links reveal" id="contact-links">
+              <a
+                href="https://github.com/gpiantamar"
+                class="contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact__link-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                    />
+                  </svg>
+                </span>
+                <span>
+                  <span class="contact__link-label" style="display: block"
+                    >GitHub</span
+                  >
+                  <span class="contact__link-value">github.com/gpiantamar</span>
+                </span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/guilherme-silva-piantamar-84ab9a232/"
+                class="contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact__link-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+                    />
+                  </svg>
+                </span>
+                <span>
+                  <span class="contact__link-label" style="display: block"
+                    >LinkedIn</span
+                  >
+                  <span class="contact__link-value"
+                    >linkedin.com/in/guilherme-silva-piantamar-84ab9a232</span
+                  >
+                </span>
+              </a>
+
+              <a
+                href="mailto:guilhermepiantamar@gmail.com"
+                class="contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact__link-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.2L19.8 6H4.2ZM20 8.1l-7.4 5.9a1 1 0 0 1-1.2 0L4 8.1v10.4a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V8.1Z"
+                    />
+                  </svg>
+                </span>
+                <span>
+                  <span class="contact__link-label" style="display: block"
+                    >Email</span
+                  >
+                  <span class="contact__link-value"
+                    >guilhermepiantamar@gmail.com</span
+                  >
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="navbar__logo-mark">GS</span>
+          <p id="footer-rights">
+            © 2024 Guilherme Silva. Todos os direitos reservados.
+          </p>
+        </div>
+
+        <nav aria-label="Links rápidos do rodapé">
+          <p class="footer__label" id="footer-links-label">Links rápidos</p>
+          <ul class="footer__links" id="footer-links" role="list">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#certificates">Certificados</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__socials-wrap">
+          <p class="footer__label" id="footer-socials-label">Redes sociais</p>
+          <div class="footer__socials" id="footer-socials">
+            <a
+              href="https://github.com/gpiantamar"
+              class="btn btn--icon"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.13-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/guilherme-silva-piantamar-84ab9a232/"
+              class="btn btn--icon"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:guilhermepiantamar@gmail.com"
+              class="btn btn--icon"
+              aria-label="Email"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.2L19.8 6H4.2ZM20 8.1l-7.4 5.9a1 1 0 0 1-1.2 0L4 8.1v10.4a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V8.1Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal"
+      id="project-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal__overlay" id="modal-overlay"></div>
+      <div class="modal__panel">
+        <button class="modal__close" id="modal-close" aria-label="Fechar modal">
+          &times;
+        </button>
+        <div id="modal-content"></div>
+      </div>
     </div>
-  </div>
 
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
