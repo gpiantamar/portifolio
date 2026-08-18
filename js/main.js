@@ -116,7 +116,6 @@
 
     let updateDots = () => {}
     let autoplayTimer = null
-    // const AUTOPLAY_INTERVAL = 10000;
 
     const getVisibleCards = () => $all(".project-card:not(.is-hidden)", grid)
 
@@ -419,63 +418,84 @@
   }
 
   function initContactForm() {
-    const form = $("#contact-form")
-    const successEl = $("#contact-success")
-    if (!form) return
+  const form = $("#contact-form")
+  const successEl = $("#contact-success")
 
-    const fields = {
-      name: { input: $("#field-name"), error: $("#error-name") },
-      email: { input: $("#field-email"), error: $("#error-email") },
-      message: { input: $("#field-message"), error: $("#error-message") },
-    }
+  if (!form) return
 
-    const clearErrors = () => {
-      Object.values(fields).forEach(({ input, error }) => {
-        if (input) input.classList.remove("is-invalid")
-        if (error) error.textContent = ""
-      })
-    }
+  const fields = {
+    name: {
+      input: $("#field-name"),
+      error: $("#error-name"),
+    },
+    email: {
+      input: $("#field-email"),
+      error: $("#error-email"),
+    },
+    message: {
+      input: $("#field-message"),
+      error: $("#error-message"),
+    },
+  }
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault()
-      if (successEl) successEl.classList.remove("is-visible")
-      clearErrors()
-
-      const values = {
-        name: fields.name.input ? fields.name.input.value : "",
-        email: fields.email.input ? fields.email.input.value : "",
-        message: fields.message.input ? fields.message.input.value : "",
-      }
-
-      const errors = validateContactForm(values)
-
-      if (Object.keys(errors).length > 0) {
-        Object.entries(errors).forEach(([key, message]) => {
-          if (fields[key].input) fields[key].input.classList.add("is-invalid")
-          if (fields[key].error) fields[key].error.textContent = message
-        })
-        if (fields[Object.keys(errors)[0]].input) {
-          fields[Object.keys(errors)[0]].input.focus()
-        }
-        return
-      }
-
-      if (successEl) successEl.classList.add("is-visible")
-      form.reset()
-      setTimeout(() => {
-        if (successEl) successEl.classList.remove("is-visible")
-      }, 5000)
-    })
-
+  const clearErrors = () => {
     Object.values(fields).forEach(({ input, error }) => {
-      if (input) {
-        input.addEventListener("input", () => {
-          input.classList.remove("is-invalid")
-          if (error) error.textContent = ""
-        })
-      }
+      if (input) input.classList.remove("is-invalid")
+      if (error) error.textContent = ""
     })
   }
+
+  form.addEventListener("submit", (e) => {
+    clearErrors()
+
+    if (successEl) {
+      successEl.classList.remove("is-visible")
+    }
+
+    const values = {
+      name: fields.name.input ? fields.name.input.value : "",
+      email: fields.email.input ? fields.email.input.value : "",
+      message: fields.message.input ? fields.message.input.value : "",
+    }
+
+    const errors = validateContactForm(values)
+
+    if (Object.keys(errors).length > 0) {
+      e.preventDefault()
+
+      Object.entries(errors).forEach(([key, message]) => {
+        if (fields[key].input) {
+          fields[key].input.classList.add("is-invalid")
+        }
+
+        if (fields[key].error) {
+          fields[key].error.textContent = message
+        }
+      })
+
+      const firstError = Object.keys(errors)[0]
+
+      if (fields[firstError].input) {
+        fields[firstError].input.focus()
+      }
+
+      return
+    }
+
+  })
+
+  Object.values(fields).forEach(({ input, error }) => {
+    if (input) {
+      input.addEventListener("input", () => {
+        input.classList.remove("is-invalid")
+
+        if (error) {
+          error.textContent = ""
+        }
+      })
+    }
+  })
+}
 
   function initScrollReveal() {
     const targets = $all(".reveal")
