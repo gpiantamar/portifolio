@@ -559,3 +559,35 @@
 
   document.addEventListener("DOMContentLoaded", init)
 })()
+
+
+
+function equalizeCertificateCards() {
+  const cards = document.querySelectorAll(".certificate-card");
+
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.style.height = "auto";
+  });
+
+  let maxHeight = 0;
+
+  cards.forEach((card) => {
+    const height = card.offsetHeight;
+
+    if (height > maxHeight) {
+      maxHeight = height;
+    }
+  });
+
+  cards.forEach((card) => {
+    card.style.height = `${maxHeight}px`;
+  });
+}
+
+
+window.addEventListener("load", equalizeCertificateCards);
+
+
+window.addEventListener("resize", equalizeCertificateCards);
